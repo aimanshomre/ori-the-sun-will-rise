@@ -1,4 +1,4 @@
-const GOOGLE_SCRIPT_URL = 'YOUR_DEPLOYED_WEB_APP_URL_HERE'; // Replace after deploying Apps Script
+const GOOGLE_SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
 
 interface FormData {
   fullName: string;
