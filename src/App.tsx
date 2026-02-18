@@ -14,7 +14,7 @@ import ContactForm from '@/components/sections/ContactForm';
 
 function App() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Navbar />
       <main>
         <Hero />
@@ -30,7 +30,7 @@ function App() {
         <ContactForm />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

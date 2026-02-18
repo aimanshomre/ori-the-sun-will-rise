@@ -8,13 +8,17 @@ interface FormData {
 }
 
 export async function submitToGoogleSheets(data: FormData): Promise<{ success: boolean }> {
+  const payload = {
+    ...data,
+    timestamp: new Date().toISOString(),
+  };
+
   await fetch(GOOGLE_SCRIPT_URL, {
     method: 'POST',
-    mode: 'no-cors',
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': 'text/plain;charset=utf-8',
     },
-    body: JSON.stringify(data),
+    body: JSON.stringify(payload),
   });
 
   return { success: true };

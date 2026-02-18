@@ -65,14 +65,14 @@ export default function Testimonials() {
           {/* Navigation arrows */}
           <button
             onClick={prev}
-            className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white border border-[#E5DDD4] rounded-full flex items-center justify-center text-[#C9B59C] hover:bg-[#F2EDE8] transition-colors cursor-pointer shadow-sm"
+            className="absolute right-2 md:-right-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white border border-[#E5DDD4] rounded-full flex items-center justify-center text-[#C9B59C] hover:bg-[#F2EDE8] transition-colors cursor-pointer shadow-sm"
             aria-label="הקודם"
           >
             <HiChevronRight className="text-xl" />
           </button>
           <button
             onClick={next}
-            className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white border border-[#E5DDD4] rounded-full flex items-center justify-center text-[#C9B59C] hover:bg-[#F2EDE8] transition-colors cursor-pointer shadow-sm"
+            className="absolute left-2 md:-left-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white border border-[#E5DDD4] rounded-full flex items-center justify-center text-[#C9B59C] hover:bg-[#F2EDE8] transition-colors cursor-pointer shadow-sm"
             aria-label="הבא"
           >
             <HiChevronLeft className="text-xl" />
