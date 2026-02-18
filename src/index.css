@@ -48,37 +48,37 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #0A0A0A;
-  --foreground: #F5F5F5;
-  --card: #1A1A1A;
-  --card-foreground: #F5F5F5;
-  --popover: #1A1A1A;
-  --popover-foreground: #F5F5F5;
-  --primary: #D4A843;
-  --primary-foreground: #0A0A0A;
-  --secondary: #111111;
-  --secondary-foreground: #F5F5F5;
-  --muted: #111111;
-  --muted-foreground: #A0A0A0;
-  --accent: #D4A843;
-  --accent-foreground: #0A0A0A;
+  --background: #FAFAF8;
+  --foreground: #1A1A1A;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+  --primary: #C9B59C;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F2EDE8;
+  --secondary-foreground: #1A1A1A;
+  --muted: #F2EDE8;
+  --muted-foreground: #7A7068;
+  --accent: #C9B59C;
+  --accent-foreground: #FFFFFF;
   --destructive: #ef4444;
-  --border: #2A2A2A;
-  --input: #2A2A2A;
-  --ring: #D4A843;
-  --chart-1: #D4A843;
-  --chart-2: #E8C96A;
-  --chart-3: #B8922F;
-  --chart-4: #A0A0A0;
-  --chart-5: #666666;
-  --sidebar: #111111;
-  --sidebar-foreground: #F5F5F5;
-  --sidebar-primary: #D4A843;
-  --sidebar-primary-foreground: #0A0A0A;
-  --sidebar-accent: #1A1A1A;
-  --sidebar-accent-foreground: #F5F5F5;
-  --sidebar-border: #2A2A2A;
-  --sidebar-ring: #D4A843;
+  --border: #E5DDD4;
+  --input: #E5DDD4;
+  --ring: #C9B59C;
+  --chart-1: #C9B59C;
+  --chart-2: #DAC8B2;
+  --chart-3: #AE916C;
+  --chart-4: #7A7068;
+  --chart-5: #B8A48A;
+  --sidebar: #F2EDE8;
+  --sidebar-foreground: #1A1A1A;
+  --sidebar-primary: #C9B59C;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #FFFFFF;
+  --sidebar-accent-foreground: #1A1A1A;
+  --sidebar-border: #E5DDD4;
+  --sidebar-ring: #C9B59C;
 }
 
 @layer base {
@@ -100,18 +100,18 @@
 }
 
 ::selection {
-  background-color: #D4A843;
-  color: #0A0A0A;
+  background-color: #C9B59C;
+  color: #FFFFFF;
 }
 
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #111111;
+  background: #F2EDE8;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D4A843;
+  background: #C9B59C;
   border-radius: 4px;
 }
 
@@ -128,8 +128,8 @@
 }
 
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 20px rgba(212, 168, 67, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(212, 168, 67, 0.6); }
+  0%, 100% { box-shadow: 0 0 20px rgba(201, 181, 156, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(201, 181, 156, 0.6); }
 }
 
 .animate-slow-zoom {

@@ -11,7 +11,7 @@ const navLinks = [
   { label: 'איך זה עובד', href: '#how' },
   { label: 'המלצות', href: '#testimonials' },
   { label: 'לזכרם', href: '#memorial' },
-  { label: 'מדיה', href: '#media' },
+  { label: 'הפלוגה בתקשורת', href: '#media' },
   { label: 'צור קשר', href: '#contact' },
 ];
 
@@ -59,17 +59,17 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-[#0A0A0A]/90 backdrop-blur-md border-b border-[#2A2A2A]'
+            ? 'bg-white/90 backdrop-blur-md border-b border-[#E5DDD4] shadow-sm'
             : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
-          {/* Logo — right side in RTL */}
-          <button onClick={() => scrollTo('#hero')} className="text-xl font-bold text-[#D4A843] tracking-wide cursor-pointer">
+          {/* Logo */}
+          <button onClick={() => scrollTo('#hero')} className={`text-xl font-bold tracking-wide cursor-pointer transition-colors ${scrolled ? 'text-[#C9B59C]' : 'text-white'}`}>
             אורי חוכימה
           </button>
 
-          {/* Desktop nav links — center */}
+          {/* Desktop nav links */}
           <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <button
@@ -77,8 +77,10 @@ export default function Navbar() {
                 onClick={() => scrollTo(link.href)}
                 className={`text-sm transition-colors duration-200 cursor-pointer ${
                   activeSection === link.href.slice(1)
-                    ? 'text-[#D4A843] font-medium'
-                    : 'text-[#A0A0A0] hover:text-[#D4A843]'
+                    ? 'text-[#C9B59C] font-medium'
+                    : scrolled
+                      ? 'text-[#7A7068] hover:text-[#C9B59C]'
+                      : 'text-white/80 hover:text-white'
                 }`}
               >
                 {link.label}
@@ -86,10 +88,10 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Desktop CTA — left side in RTL */}
+          {/* Desktop CTA */}
           <button
             onClick={() => scrollTo('#contact')}
-            className="hidden lg:block bg-[#D4A843] text-[#0A0A0A] font-bold text-sm px-6 py-2.5 rounded-lg hover:bg-[#E8C96A] transition-colors cursor-pointer"
+            className="hidden lg:block bg-[#C9B59C] text-white font-bold text-sm px-6 py-2.5 rounded-lg hover:bg-[#B8A48A] transition-colors cursor-pointer"
           >
             לתיאום הרצאה
           </button>
@@ -97,7 +99,9 @@ export default function Navbar() {
           {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-[#F5F5F5] text-2xl cursor-pointer"
+            className={`lg:hidden text-2xl cursor-pointer transition-colors ${
+              scrolled ? 'text-[#1A1A1A]' : 'text-white'
+            }`}
             aria-label="תפריט"
           >
             {mobileOpen ? <HiX /> : <HiMenu />}

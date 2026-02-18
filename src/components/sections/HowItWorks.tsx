@@ -11,7 +11,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how" className="py-24 px-6">
+    <section id="how" className="bg-[#FAFAF8] py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <motion.div
           variants={fadeInUp}
@@ -19,11 +19,11 @@ export default function HowItWorks() {
           whileInView="visible"
           viewport={viewportConfig}
         >
-          <h2 className="text-3xl md:text-[2.5rem] font-bold text-[#F5F5F5] mb-2">
+          <h2 className="text-3xl md:text-[2.5rem] font-bold text-[#1A1A1A] mb-2">
             איך זה עובד?
           </h2>
-          <div className="w-16 h-1 bg-[#D4A843] mb-6 rounded-full" />
-          <p className="text-[#A0A0A0] text-base md:text-[1.05rem] leading-[1.8] mb-14 max-w-3xl">
+          <div className="w-16 h-1 bg-[#C9B59C] mb-6 rounded-full" />
+          <p className="text-[#7A7068] text-base md:text-[1.05rem] leading-[1.8] mb-14 max-w-3xl">
             שיטת העבודה שלי מבוססת התאמה מדויקת לקהל ולמטרה כדי שהסיפור יעבור נכון, בכבוד, ובעוצמה, ויהפוך ללמידה אמיתית.
           </p>
         </motion.div>
@@ -36,8 +36,8 @@ export default function HowItWorks() {
           viewport={viewportConfig}
           className="relative"
         >
-          {/* Vertical gold line */}
-          <div className="absolute right-6 top-0 bottom-0 w-0.5 bg-[#D4A843]/30" />
+          {/* Vertical accent line */}
+          <div className="absolute right-6 top-0 bottom-0 w-0.5 bg-[#C9B59C]/30" />
 
           <div className="flex flex-col gap-10">
             {steps.map((step) => (
@@ -47,14 +47,14 @@ export default function HowItWorks() {
                 className="flex items-start gap-6 relative"
               >
                 {/* Number circle */}
-                <div className="relative z-10 shrink-0 w-12 h-12 rounded-full border-2 border-[#D4A843] bg-[#0A0A0A] flex items-center justify-center">
-                  <span className="text-[#D4A843] font-bold text-lg">{step.num}</span>
+                <div className="relative z-10 shrink-0 w-12 h-12 rounded-full border-2 border-[#C9B59C] bg-[#FAFAF8] flex items-center justify-center">
+                  <span className="text-[#C9B59C] font-bold text-lg">{step.num}</span>
                 </div>
 
                 {/* Content */}
                 <div className="pt-2">
-                  <h3 className="text-[#D4A843] font-bold text-lg mb-1">{step.label}</h3>
-                  <p className="text-[#A0A0A0] text-[0.95rem] leading-[1.7]">{step.text}</p>
+                  <h3 className="text-[#C9B59C] font-bold text-lg mb-1">{step.label}</h3>
+                  <p className="text-[#7A7068] text-[0.95rem] leading-[1.7]">{step.text}</p>
                 </div>
               </motion.div>
             ))}

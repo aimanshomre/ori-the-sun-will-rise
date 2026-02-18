@@ -24,7 +24,7 @@ export default function Hero() {
         <div
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(180deg, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.95) 100%)',
+            background: 'linear-gradient(180deg, rgba(26,26,26,0.25) 0%, rgba(26,26,26,0.85) 100%)',
           }}
         />
       </div>
@@ -44,7 +44,7 @@ export default function Hero() {
           variants={fadeUp(0.6)}
           initial="hidden"
           animate="visible"
-          className="text-lg md:text-xl font-medium text-[#D4A843] tracking-wide mb-4"
+          className="text-lg md:text-xl font-medium text-[#C9B59C] tracking-wide mb-4"
         >
           הסיפור שלנו. הלקחים שלכם להוביל קדימה.
         </motion.p>
@@ -53,7 +53,7 @@ export default function Hero() {
           variants={fadeUp(0.9)}
           initial="hidden"
           animate="visible"
-          className="text-base md:text-lg text-[#A0A0A0] mb-8 max-w-[700px] mx-auto leading-relaxed"
+          className="text-base md:text-lg text-white/70 mb-8 max-w-[700px] mx-auto leading-relaxed"
         >
           הרצאות מנהיגות, חוסן וקבלת החלטות מתוך סיפור לחימה אמיתי
         </motion.p>
@@ -63,19 +63,12 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           onClick={scrollToContact}
-          className="bg-[#D4A843] text-[#0A0A0A] font-bold text-lg px-8 py-4 rounded-lg hover:bg-[#E8C96A] transition-colors animate-pulse-glow cursor-pointer"
+          className="bg-[#C9B59C] text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-[#B8A48A] transition-colors animate-pulse-glow cursor-pointer"
         >
-          לתיאום הרצאה ללא עלות
+          לתיאום הרצאה
         </motion.button>
 
-        <motion.p
-          variants={fadeUp(1.4)}
-          initial="hidden"
-          animate="visible"
-          className="text-[#666666] text-sm mt-3"
-        >
-          ללא התחייבות
-        </motion.p>
+
       </div>
     </section>
   );

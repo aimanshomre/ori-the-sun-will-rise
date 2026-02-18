@@ -41,7 +41,7 @@ const clientTypes = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-[#111111] py-24 px-6">
+    <section id="services" className="bg-[#F2EDE8] py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           variants={fadeInUp}
@@ -49,10 +49,10 @@ export default function Services() {
           whileInView="visible"
           viewport={viewportConfig}
         >
-          <h2 className="text-3xl md:text-[2.5rem] font-bold text-[#F5F5F5] mb-2">
+          <h2 className="text-3xl md:text-[2.5rem] font-bold text-[#1A1A1A] mb-2">
             השירותים המגוונים שלי
           </h2>
-          <div className="w-16 h-1 bg-[#D4A843] mb-12 rounded-full" />
+          <div className="w-16 h-1 bg-[#C9B59C] mb-12 rounded-full" />
         </motion.div>
 
         {/* Service Cards Grid */}
@@ -67,11 +67,11 @@ export default function Services() {
             <motion.div
               key={service.title}
               variants={scaleIn}
-              className="bg-[#1A1A1A] border border-[#2A2A2A] rounded-xl p-8 hover:border-[#D4A843]/50 hover:shadow-[0_0_30px_rgba(212,168,67,0.08)] transition-all duration-300 group"
+              className="bg-white border border-[#E5DDD4] rounded-xl p-8 hover:border-[#C9B59C]/50 hover:shadow-lg transition-all duration-300 group"
             >
-              <service.icon className="text-[#D4A843] text-[2.5rem] mb-5 group-hover:scale-110 transition-transform" />
-              <h3 className="text-[#F5F5F5] font-bold text-xl mb-3">{service.title}</h3>
-              <p className="text-[#A0A0A0] font-normal leading-[1.7] text-[0.95rem]">{service.description}</p>
+              <service.icon className="text-[#C9B59C] text-[2.5rem] mb-5 group-hover:scale-110 transition-transform" />
+              <h3 className="text-[#1A1A1A] font-bold text-xl mb-3">{service.title}</h3>
+              <p className="text-[#7A7068] font-normal leading-[1.7] text-[0.95rem]">{service.description}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -84,12 +84,12 @@ export default function Services() {
           viewport={viewportConfig}
           className="mb-12"
         >
-          <h3 className="text-[#F5F5F5] font-bold text-lg mb-4">שירותים נוספים:</h3>
+          <h3 className="text-[#1A1A1A] font-bold text-lg mb-4">שירותים נוספים:</h3>
           <div className="flex flex-col gap-3">
             {additionalServices.map((svc) => (
               <div key={svc} className="flex items-center gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-[#D4A843] shrink-0" />
-                <p className="text-[#A0A0A0] text-[0.95rem]">{svc}</p>
+                <div className="w-1.5 h-1.5 rounded-full bg-[#C9B59C] shrink-0" />
+                <p className="text-[#7A7068] text-[0.95rem]">{svc}</p>
               </div>
             ))}
           </div>
@@ -102,20 +102,20 @@ export default function Services() {
           whileInView="visible"
           viewport={viewportConfig}
         >
-          <h3 className="text-[#F5F5F5] font-bold text-lg mb-4">הלקוחות שלי:</h3>
-          <p className="text-[#A0A0A0] text-[0.95rem] leading-[1.7] mb-5 md:hidden">
+          <h3 className="text-[#1A1A1A] font-bold text-lg mb-4">הלקוחות שלי:</h3>
+          <p className="text-[#7A7068] text-[0.95rem] leading-[1.7] mb-5 md:hidden">
             ארגונים וחברות, בתי ספר, מכינות, יחידות ומסגרות ביטחוניות, קהילות, ימי מנהיגות ועידוד גיוס, וכל מי שמחפש סיפור אמיתי עם ערך וכלים לחיים.
           </p>
           <div className="hidden md:flex flex-wrap gap-3">
             {clientTypes.map((client) => (
               <span
                 key={client}
-                className="bg-[#1A1A1A] border border-[#2A2A2A] rounded-full px-4 py-2 text-sm text-[#A0A0A0]"
+                className="bg-white border border-[#E5DDD4] rounded-full px-4 py-2 text-sm text-[#7A7068]"
               >
                 {client}
               </span>
             ))}
-            <span className="bg-[#1A1A1A] border border-[#2A2A2A] rounded-full px-4 py-2 text-sm text-[#A0A0A0]">
+            <span className="bg-white border border-[#E5DDD4] rounded-full px-4 py-2 text-sm text-[#7A7068]">
               וכל מי שמחפש סיפור אמיתי עם ערך וכלים לחיים
             </span>
           </div>

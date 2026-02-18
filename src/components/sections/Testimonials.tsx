@@ -42,7 +42,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-24 px-6">
+    <section id="testimonials" className="bg-[#FAFAF8] py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           variants={fadeInUp}
@@ -50,10 +50,10 @@ export default function Testimonials() {
           whileInView="visible"
           viewport={viewportConfig}
         >
-          <h2 className="text-3xl md:text-[2.5rem] font-bold text-[#F5F5F5] mb-2">
+          <h2 className="text-3xl md:text-[2.5rem] font-bold text-[#1A1A1A] mb-2">
             לקוחות מספרים עליי
           </h2>
-          <div className="w-16 h-1 bg-[#D4A843] mb-12 rounded-full" />
+          <div className="w-16 h-1 bg-[#C9B59C] mb-12 rounded-full" />
         </motion.div>
 
         {/* Carousel */}
@@ -65,14 +65,14 @@ export default function Testimonials() {
           {/* Navigation arrows */}
           <button
             onClick={prev}
-            className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-[#1A1A1A] border border-[#2A2A2A] rounded-full flex items-center justify-center text-[#D4A843] hover:bg-[#222222] transition-colors cursor-pointer"
+            className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white border border-[#E5DDD4] rounded-full flex items-center justify-center text-[#C9B59C] hover:bg-[#F2EDE8] transition-colors cursor-pointer shadow-sm"
             aria-label="הקודם"
           >
             <HiChevronRight className="text-xl" />
           </button>
           <button
             onClick={next}
-            className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-[#1A1A1A] border border-[#2A2A2A] rounded-full flex items-center justify-center text-[#D4A843] hover:bg-[#222222] transition-colors cursor-pointer"
+            className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white border border-[#E5DDD4] rounded-full flex items-center justify-center text-[#C9B59C] hover:bg-[#F2EDE8] transition-colors cursor-pointer shadow-sm"
             aria-label="הבא"
           >
             <HiChevronLeft className="text-xl" />
@@ -92,7 +92,7 @@ export default function Testimonials() {
                 {getVisibleIndices().map((idx) => (
                   <div
                     key={idx}
-                    className="bg-[#1A1A1A] rounded-xl p-4 border border-[#2A2A2A] hover:border-[#D4A843]/40 transition-colors"
+                    className="bg-white rounded-xl p-4 border border-[#E5DDD4] hover:border-[#C9B59C]/40 transition-colors shadow-sm"
                   >
                     <img
                       src={testimonials[idx].src}
@@ -113,7 +113,7 @@ export default function Testimonials() {
                 key={idx}
                 onClick={() => setCurrent(idx)}
                 className={`w-2.5 h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                  idx === current ? 'bg-[#D4A843] scale-125' : 'bg-[#2A2A2A]'
+                  idx === current ? 'bg-[#C9B59C] scale-125' : 'bg-[#E5DDD4]'
                 }`}
                 aria-label={`המלצה ${idx + 1}`}
               />

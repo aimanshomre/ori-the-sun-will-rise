@@ -17,7 +17,7 @@ export default function TheResult() {
   };
 
   return (
-    <section id="result" className="bg-[#111111] py-24 px-6">
+    <section id="result" className="bg-[#F2EDE8] py-24 px-6">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           variants={fadeInUp}
@@ -25,12 +25,12 @@ export default function TheResult() {
           whileInView="visible"
           viewport={viewportConfig}
         >
-          <h2 className="text-3xl md:text-[2.5rem] font-bold text-[#F5F5F5] mb-2">
+          <h2 className="text-3xl md:text-[2.5rem] font-bold text-[#1A1A1A] mb-2">
             המסר שלי אליך, התוצאה שתקבל
           </h2>
-          <div className="w-16 h-1 bg-[#D4A843] mx-auto mb-8 rounded-full" />
+          <div className="w-16 h-1 bg-[#C9B59C] mx-auto mb-8 rounded-full" />
 
-          <p className="text-[#F5F5F5] text-base md:text-[1.05rem] leading-[1.8] font-normal mb-14">
+          <p className="text-[#7A7068] text-base md:text-[1.05rem] leading-[1.8] font-normal mb-14">
             בעזרת הדרך שנעבור יחד בהרצאה, במפגש או דרך הספר תקבל/י סיפור אמת שמייצר חיבור עמוק, ומתוכו למידה ולקחים: איך מובילים כשקשה, איך מקבלים החלטות תחת לחץ, איך מתמודדים עם משברים ואתגרים, איך מחזיקים צוות לאורך זמן, ואיך ממשיכים קדימה גם אחרי רגעים מטלטלים. וזה עם דיוק במסרים והתאמה לקהל כדי שהחוויה תישאר איתכם ותשפיע לאורך זמן.
           </p>
         </motion.div>
@@ -47,10 +47,10 @@ export default function TheResult() {
             <motion.div
               key={item.text}
               variants={scaleIn}
-              className="bg-[#1A1A1A] border border-[#2A2A2A] rounded-xl p-5 flex flex-col items-center gap-3 hover:border-[#D4A843]/30 transition-colors"
+              className="bg-white border border-[#E5DDD4] rounded-xl p-5 flex flex-col items-center gap-3 hover:border-[#C9B59C]/30 hover:shadow-md transition-all"
             >
-              <item.icon className="text-[#D4A843] text-2xl" />
-              <p className="text-[#F5F5F5] text-sm text-center font-medium">{item.text}</p>
+              <item.icon className="text-[#C9B59C] text-2xl" />
+              <p className="text-[#1A1A1A] text-sm text-center font-medium">{item.text}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -64,9 +64,9 @@ export default function TheResult() {
         >
           <button
             onClick={scrollToContact}
-            className="bg-[#D4A843] text-[#0A0A0A] font-bold text-lg px-8 py-4 rounded-lg hover:bg-[#E8C96A] transition-colors cursor-pointer"
+            className="bg-[#C9B59C] text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-[#B8A48A] transition-colors cursor-pointer"
           >
-            לתיאום הרצאה ללא עלות
+            לתיאום הרצאה
           </button>
         </motion.div>
       </div>
