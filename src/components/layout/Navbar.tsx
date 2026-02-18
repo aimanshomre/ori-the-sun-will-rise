@@ -63,9 +63,9 @@ export default function Navbar() {
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20 overflow-hidden">
           {/* Logo */}
-          <button onClick={() => scrollTo('#hero')} className={`text-xl font-bold tracking-wide cursor-pointer transition-colors ${scrolled ? 'text-[#C9B59C]' : 'text-white'}`}>
+          <button onClick={() => scrollTo('#hero')} className={`text-xl font-bold tracking-wide cursor-pointer transition-colors shrink-0 ${scrolled ? 'text-[#C9B59C]' : 'text-white'}`}>
             אורי חוכימה
           </button>
 
