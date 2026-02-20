@@ -5,10 +5,11 @@ import MobileMenu from './MobileMenu';
 
 const navLinks = [
   { label: 'ראשי', href: '#hero' },
-  { label: 'אודות', href: '#about' },
+  { label: 'מי אני?', href: '#about' },
+  { label: 'החזון שלי', href: '#slogan' },
   { label: 'למה אני', href: '#why' },
   { label: 'שירותים', href: '#services' },
-  { label: 'איך זה עובד', href: '#how' },
+  { label: 'הספר שלי', href: '#book' },
   { label: 'המלצות', href: '#testimonials' },
   { label: 'לזכרם', href: '#memorial' },
   { label: 'הפלוגה בתקשורת', href: '#media' },
@@ -36,7 +37,7 @@ export default function Navbar() {
           }
         });
       },
-      { rootMargin: '-80px 0px -60% 0px', threshold: 0 }
+      { rootMargin: '-96px 0px -60% 0px', threshold: 0 }
     );
     sections.forEach((id) => {
       const el = document.getElementById(id);
@@ -63,9 +64,9 @@ export default function Navbar() {
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-24 overflow-hidden">
           {/* Logo */}
-          <button onClick={() => scrollTo('#hero')} className={`text-xl font-bold tracking-wide cursor-pointer transition-colors shrink-0 ${scrolled ? 'text-[#C9B59C]' : 'text-white'}`}>
+          <button onClick={() => scrollTo('#hero')} className={`text-2xl font-bold tracking-wide cursor-pointer transition-colors shrink-0 ${scrolled ? 'text-[#C9B59C]' : 'text-white drop-shadow-md'}`}>
             אורי חוכימה
           </button>
 
@@ -75,12 +76,12 @@ export default function Navbar() {
               <button
                 key={link.href}
                 onClick={() => scrollTo(link.href)}
-                className={`text-sm transition-colors duration-200 cursor-pointer ${
+                className={`text-base font-semibold transition-colors duration-200 cursor-pointer ${
                   activeSection === link.href.slice(1)
-                    ? 'text-[#C9B59C] font-medium'
+                    ? 'text-[#C9B59C] font-bold'
                     : scrolled
-                      ? 'text-[#7A7068] hover:text-[#C9B59C]'
-                      : 'text-white/80 hover:text-white'
+                      ? 'text-[#1A1A1A] hover:text-[#C9B59C]'
+                      : 'text-white drop-shadow-md hover:text-[#C9B59C]'
                 }`}
               >
                 {link.label}
@@ -91,7 +92,7 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <button
             onClick={() => scrollTo('#contact')}
-            className="hidden lg:block bg-[#C9B59C] text-white font-bold text-sm px-6 py-2.5 rounded-lg hover:bg-[#B8A48A] transition-colors cursor-pointer"
+            className="hidden lg:block bg-[#C9B59C] text-white font-bold text-base px-6 py-2.5 rounded-lg hover:bg-[#B8A48A] transition-colors cursor-pointer"
           >
             לתיאום הרצאה
           </button>

@@ -5,8 +5,7 @@ import About from '@/components/sections/About';
 import SloganVision from '@/components/sections/SloganVision';
 import WhyChooseUs from '@/components/sections/WhyChooseUs';
 import Services from '@/components/sections/Services';
-import HowItWorks from '@/components/sections/HowItWorks';
-import TheResult from '@/components/sections/TheResult';
+import MyBook from '@/components/sections/MyBook';
 import Testimonials from '@/components/sections/Testimonials';
 import Memorial from '@/components/sections/Memorial';
 import MediaAppearances from '@/components/sections/MediaAppearances';
@@ -22,8 +21,7 @@ function App() {
         <SloganVision />
         <WhyChooseUs />
         <Services />
-        <HowItWorks />
-        <TheResult />
+        <MyBook />
         <Testimonials />
         <Memorial />
         <MediaAppearances />

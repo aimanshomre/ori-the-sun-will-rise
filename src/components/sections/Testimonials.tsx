@@ -42,7 +42,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="bg-[#FAFAF8] py-24 px-6">
+    <section id="testimonials" className="bg-[#F2EDE8] py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           variants={fadeInUp}

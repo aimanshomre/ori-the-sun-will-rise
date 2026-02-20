@@ -13,14 +13,14 @@ const fallenSoldiers = [
   {
     id: 1,
     rank: 'סמ"ר',
-    name: 'דניאל משה דנינו ז״ל',
+    name: 'דניאל דנינו ז״ל',
     photo: imgDanino,
     yizkorUrl: 'https://www.izkor.gov.il/%D7%93%D7%A0%D7%99%D7%90%D7%9C%20%D7%9E%D7%A9%D7%94%20%D7%93%D7%A0%D7%99%D7%A0%D7%95/en_d1cad39c0ba6c7fc80e83cabfcd55afa',
   },
   {
     id: 2,
     rank: 'סמ"ר',
-    name: 'רועי (חיים) וייזר ז״ל',
+    name: 'רועי וייזר ז״ל',
     photo: imgWeizer,
     yizkorUrl: 'https://www.izkor.gov.il/%D7%A8%D7%95%D7%A2%D7%99%20(%D7%97%D7%99%D7%99%D7%9D)%20%D7%95%D7%99%D7%99%D7%96%D7%A8/en_3200e0fd70e8becb80ced1e399868eb5',
   },
@@ -50,12 +50,13 @@ const fallenSoldiers = [
     rank: 'סמל',
     name: 'ירון זוהר ז״ל',
     photo: imgZohar,
+    objectPosition: 'object-center' as const,
     yizkorUrl: 'https://www.izkor.gov.il/%D7%99%D7%A8%D7%95%D7%9F%20%D7%96%D7%95%D7%94%D7%A8/en_f5eb0576145bf79331c40052b2ccf111',
   },
   {
     id: 7,
     rank: 'סמל',
-    name: 'נתנאל אברהם שלום יאנג ז״ל',
+    name: 'נתנאל יאנג ז״ל',
     photo: imgYang,
     yizkorUrl: 'https://www.izkor.gov.il/%D7%A0%D7%AA%D7%A0%D7%90%D7%9C%20%D7%90%D7%91%D7%A8%D7%94%D7%9D%20%D7%A9%D7%9C%D7%95%D7%9D%20%D7%99%D7%90%D7%A0%D7%92/en_571b67409bded2562b3107999542b1e6',
   },
@@ -99,22 +100,6 @@ export default function Memorial() {
           </p>
         </motion.div>
 
-        {/* Memorial image */}
-        {/* <motion.div
-          variants={dignifiedFadeIn}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          className="mb-16"
-        >
-          <img
-            src={memorialImage}
-            alt="אורי חוכימה על הבמה עם שקף הנצחה לנופלי הפלוגה"
-            className="w-full rounded-xl border border-[#C9B59C]/20"
-            loading="lazy"
-          />
-        </motion.div> */}
-
         {/* Fallen soldiers grid */}
         <motion.div
           variants={staggerContainer}
@@ -133,7 +118,7 @@ export default function Memorial() {
               <img
                 src={soldier.photo}
                 alt={`${soldier.rank} ${soldier.name}`}
-                className="w-20 h-20 rounded-full object-cover object-top border-2 border-[#C9B59C]/40 mx-auto mb-4"
+                className={`w-24 h-24 rounded-full object-cover ${'objectPosition' in soldier ? soldier.objectPosition : 'object-top'} border-2 border-[#C9B59C]/40 mx-auto mb-4`}
                 loading="lazy"
               />
               <p className="text-[#C9B59C] text-xs font-medium mb-1">{soldier.rank}</p>

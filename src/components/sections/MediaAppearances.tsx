@@ -82,7 +82,7 @@ export default function MediaAppearances() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           {mediaCards.map((card) => (
             <motion.a
@@ -98,29 +98,6 @@ export default function MediaAppearances() {
             </motion.a>
           ))}
         </motion.div>
-
-        {/* Book Headstart banner */}
-        <motion.a
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          href="https://headstart.co.il/project/86894"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block bg-gradient-to-l from-[#C9B59C]/15 to-[#C9B59C]/5 border border-[#C9B59C]/30 rounded-xl p-6 md:p-8 hover:border-[#C9B59C]/60 transition-all group"
-        >
-          <div className="flex items-center gap-4 flex-wrap">
-            <div className="w-12 h-12 rounded-full bg-[#C9B59C]/20 flex items-center justify-center shrink-0">
-              <span className="text-[#C9B59C] text-xl">📖</span>
-            </div>
-            <div>
-              <h3 className="text-[#C9B59C] font-bold text-lg mb-1">הספר &quot;אחרינו השמש תזרח&quot;</h3>
-              <p className="text-[#7A7068] text-sm">תמכו בפרויקט ב-Headstart</p>
-            </div>
-            <div className="mr-auto text-[#C9B59C] opacity-0 group-hover:opacity-100 transition-opacity text-lg">←</div>
-          </div>
-        </motion.a>
       </div>
     </section>
   );

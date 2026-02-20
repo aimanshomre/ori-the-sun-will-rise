@@ -1,5 +1,5 @@
 import { motion, type Variants } from 'framer-motion';
-import heroImage from '@/assets/images/ori-soldiers-illustration.jpeg';
+import heroImage from '@/assets/images/main-image.png';
 
 const fadeUp = (delay: number): Variants => ({
   hidden: { opacity: 0, y: 40 },
@@ -19,6 +19,7 @@ export default function Hero() {
           src={heroImage}
           alt="חיילים בשדה הקרב עם שקיעה"
           className="w-full h-full object-cover animate-slow-zoom"
+          fetchPriority="high"
         />
         {/* Gradient overlay */}
         <div

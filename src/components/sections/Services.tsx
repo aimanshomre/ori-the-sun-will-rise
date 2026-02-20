@@ -50,7 +50,7 @@ export default function Services() {
           viewport={viewportConfig}
         >
           <h2 className="text-3xl md:text-[2.5rem] font-bold text-[#1A1A1A] mb-2">
-            השירותים המגוונים שלי
+            שירותים שלי
           </h2>
           <div className="w-16 h-1 bg-[#C9B59C] mb-12 rounded-full" />
         </motion.div>

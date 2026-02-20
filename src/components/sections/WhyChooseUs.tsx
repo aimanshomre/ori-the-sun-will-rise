@@ -1,17 +1,40 @@
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer, viewportConfig } from '@/lib/animations';
+import { HiShieldCheck, HiFire, HiUserGroup, HiStar, HiArrowPath } from 'react-icons/hi2';
 
-const values = [
-  'אמת',
-  'מחויבות',
-  'מקצועיות',
-  'כבוד לזיכרון',
-  'צניעות',
-  'דיוק',
-  'שיח בגובה העיניים',
+const benefits = [
+  {
+    icon: HiShieldCheck,
+    title: 'קבלת החלטות באי־ודאות',
+    description: 'כשאין זמן ואין תמונה מלאה',
+  },
+  {
+    icon: HiFire,
+    title: 'ניהול לחץ ועומס',
+    description: 'איך ממשיכים לתפקד גם כשקשה',
+  },
+  {
+    icon: HiUserGroup,
+    title: 'החזקת צוות ואמון',
+    description: 'תקשורת פשוטה, בהירה ומובילה',
+  },
+  {
+    icon: HiStar,
+    title: 'ערכים תחת אש',
+    description: 'דיוק, אחריות, ודוגמה אישית',
+  },
+  {
+    icon: HiArrowPath,
+    title: 'חוסן וצמיחה אחרי משבר',
+    description: 'לקום, להשתפר ולהמשיך קדימה',
+  },
 ];
 
 export default function WhyChooseUs() {
+  const scrollToContact = () => {
+    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section id="why" className="bg-[#FAFAF8] py-24 px-6">
       <div className="max-w-6xl mx-auto">
@@ -22,13 +45,22 @@ export default function WhyChooseUs() {
           viewport={viewportConfig}
         >
           <h2 className="text-3xl md:text-[2.5rem] font-bold text-[#1A1A1A] mb-2">
-            למה לבחור בנו
+            למה לבחור בי?
           </h2>
           <div className="w-16 h-1 bg-[#C9B59C] mb-8 rounded-full" />
 
           <p className="text-[#7A7068] text-base md:text-[1.05rem] leading-[1.8] font-normal mb-10">
-            בעולם רווי רעש, סיסמאות ומידע חלקי , חשוב לשמוע סיפור אמת שמגיע מבפנים, בצורה אחראית, מדויקת ומכבדת. ההרצאה שלי מביאה את סיפור הפלוגה מה־7/10 ולאורך הלחימה, ומשם יוצאים עם דבר אחד ברור: למידה אמיתית. לא &quot;רק סיפור&quot;, אלא לקחים שאפשר לקחת לחיים איך מקבלים החלטות כשאין תמונה מלאה, איך מתמודדים עם פחד ולחץ, איך מחזיקים צוות לאורך זמן, איך לומדים מאירועים מרכזיים תוך כדי תנועה, ואיך בונים חוסן אישי וצוותי גם כשהמציאות לא עוצרת. אני מביא ניסיון פיקודי מהשטח ויכולת עמידה מול קהל, ומתרגם חוויות מורכבות לשפה פשוטה ונוגעת כזאת שמייצרת חיבור, הבנה, וכלים. הערכים שמובילים אותי בעשייה הם: אמת, מחויבות, מקצועיות, כבוד לזיכרון, צניעות, דיוק ושיח בגובה העיניים. הכל תחת קורת גג אחת: הרצאות מותאמות לקהלים שונים, אירועים ומפגשי קהילה, תוכן דיגיטלי ושיתופי פעולה סביב הספר והמסרים.
+            אני מביא סיפור שמגיע מבפנים, בגובה העיניים, בלי פילטרים, עם דיוק, אחריות וכבוד. זו לא הרצאה שנשארת ברגש בלבד, אלא מסע שמתרגם מציאות קיצונית לכלים פרקטיים שאפשר לקחת לחיים, לצוותים ולארגון, מספר את סיפור הגבורה של הפלוגה ומנציח את הגיבורים שמסרו את נפשם להגנה על המדינה.
           </p>
+        </motion.div>
+
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportConfig}
+        >
+          <h3 className="text-[#1A1A1A] font-bold text-xl mb-6">מה הקהל מקבל בפועל:</h3>
         </motion.div>
 
         <motion.div
@@ -36,17 +68,37 @@ export default function WhyChooseUs() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="flex flex-wrap gap-3"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10"
         >
-          {values.map((value) => (
-            <motion.span
-              key={value}
+          {benefits.map((benefit) => (
+            <motion.div
+              key={benefit.title}
               variants={fadeInUp}
-              className="border border-[#C9B59C]/50 rounded-full px-5 py-2.5 text-sm text-[#C9B59C] hover:bg-[#C9B59C]/10 hover:shadow-[0_0_15px_rgba(201,181,156,0.15)] transition-all duration-300"
+              className="bg-white border border-[#E5DDD4] rounded-xl p-6 hover:border-[#C9B59C]/50 hover:shadow-lg transition-all duration-300 group"
             >
-              {value}
-            </motion.span>
+              <benefit.icon className="text-[#C9B59C] text-[2rem] mb-4 group-hover:scale-110 transition-transform" />
+              <h4 className="text-[#1A1A1A] font-bold text-lg mb-2">{benefit.title}</h4>
+              <p className="text-[#7A7068] font-normal text-[0.95rem]">{benefit.description}</p>
+            </motion.div>
           ))}
+        </motion.div>
+
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportConfig}
+        >
+          <p className="text-[#7A7068] text-base md:text-[1.05rem] leading-[1.8] font-normal mb-8">
+            ההרצאה מותאמת לקהלים שונים (ארגונים, מכינות, בתי ספר וקבוצות), ומשלבת אמת אנושית עם מסגרת עבודה ברורה, לצד הנצחה וזיכרון של לוחמי הפלוגה שנפלו וגבורתם.
+          </p>
+
+          <button
+            onClick={scrollToContact}
+            className="bg-[#C9B59C] text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-[#B8A48A] transition-colors cursor-pointer"
+          >
+            לתיאום הרצאה
+          </button>
         </motion.div>
       </div>
     </section>
