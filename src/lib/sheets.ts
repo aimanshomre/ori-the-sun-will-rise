@@ -15,6 +15,7 @@ export async function submitToGoogleSheets(data: FormData): Promise<{ success: b
 
   await fetch(GOOGLE_SCRIPT_URL, {
     method: 'POST',
+    mode: 'no-cors',
     headers: {
       'Content-Type': 'text/plain;charset=utf-8',
     },
