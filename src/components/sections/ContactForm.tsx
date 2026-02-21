@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { HiPhone, HiEnvelope, HiCheck } from 'react-icons/hi2';
+import { HiCheck } from 'react-icons/hi2';
 import { fadeInRight, fadeInLeft, viewportConfig } from '@/lib/animations';
 import { contactFormSchema, type ContactFormData } from '@/lib/validations';
 import { submitToGoogleSheets } from '@/lib/sheets';
@@ -130,24 +130,6 @@ export default function ContactForm() {
             whileInView="visible"
             viewport={viewportConfig}
           >
-            <p className="text-[#C9B59C] font-bold text-xl mb-6">אורי חוכימה</p>
-
-            <div className="flex flex-col gap-4 mb-8">
-              <a href="tel:0543049080" className="flex items-center gap-3 text-[#7A7068] hover:text-[#C9B59C] transition-colors group">
-                <div className="w-10 h-10 rounded-full bg-white border border-[#E5DDD4] flex items-center justify-center group-hover:border-[#C9B59C]/50 transition-colors shadow-sm">
-                  <HiPhone className="text-[#C9B59C]" />
-                </div>
-                <span className="font-medium" dir="ltr">054-304-9080</span>
-              </a>
-
-              <a href="mailto:ori6hukima@gmail.com" className="flex items-center gap-3 text-[#7A7068] hover:text-[#C9B59C] transition-colors group">
-                <div className="w-10 h-10 rounded-full bg-white border border-[#E5DDD4] flex items-center justify-center group-hover:border-[#C9B59C]/50 transition-colors shadow-sm">
-                  <HiEnvelope className="text-[#C9B59C]" />
-                </div>
-                <span className="font-medium">ori6hukima@gmail.com</span>
-              </a>
-            </div>
-
             <img
               src={contactImage}
               alt="אורי חוכימה מרצה במרכז הרפואי מאיר"
